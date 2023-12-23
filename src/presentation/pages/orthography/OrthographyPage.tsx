@@ -70,7 +70,6 @@ export const OrthographyPage = () => {
               <MyMessage key={index} text={message.text} />
             )
           )}
-          <MyMessage text="" />
           {isLoading && (
             <div className="col-start-1 col-end-12 fade-in">
               <TypingLoader className="fade-in" />
