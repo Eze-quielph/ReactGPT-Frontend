@@ -4,14 +4,14 @@ import {
   MyMessage,
   TextMessagesBox,
   TypingLoader,
-} from "../../components";
+} from "../components";
 
 interface Message {
   text: string;
   isGpt: boolean;
 }
 
-export const OrthographyPage = () => {
+export const ChatTemplate = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [messages, setmessages] = useState<Message[]>([]);
 
@@ -46,22 +46,10 @@ export const OrthographyPage = () => {
           )}
         </div>
       </div>
-{/*       <TextMessagesBoxSelect
-        onSendMessages={() => console.log()}
-        options={[
-          { id: "1", text: "hello" },
-          { id: "2", text: "world" },
-          { id: "3", text: "bye" },
-        ]}
-      /> */}
-      {/*   <TextMessagesBoxFile
-        onSendMessages={handlePost}
-        placeholder="Escribe tu texto aquí"
-      /> */}
       <TextMessagesBox
         onSendMessages={handlePost}
         placeholder="Escribe tu texto aquí"
-        disableCorrections
+        disableCorrections={true}
       />
     </div>
   );
