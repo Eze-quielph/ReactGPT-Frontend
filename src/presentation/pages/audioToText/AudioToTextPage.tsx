@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export const AudioToTextPage = () => {
-  return (
-    <div>AudioToTextPage</div>
-  )
-}
+  return <div>Proximamente</div>;
+};
